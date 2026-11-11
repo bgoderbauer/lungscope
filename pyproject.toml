@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lungscope"
+version = "0.1.0"
+description = "Interactive visualization of reduced lung simulations and uncertainty studies"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+    "trame>=3.13,<4",
+    "trame-vtk>=2.11,<3",
+    "trame-vuetify>=3.2,<4",
+    "vtk>=9.3,<10",
+]
+
+[project.scripts]
+lungscope = "lungscope.app:main"
+
+[project.urls]
+Repository = "https://github.com/bgoderbauer/lungscope"
+
+[tool.setuptools.packages.find]
+where = ["src"]
